@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="edab2ad8-7268-4304-bf54-5f7996824b5f"
+    Publisher="CN=jenx.si"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="edab2ad8-7268-4304-bf54-5f7996824b5f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Jenx.Bluetooth.GattServer.Desktop</DisplayName>
+    <PublisherDisplayName>jenx.si</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="Jenx.Bluetooth.GattServer.Desktop.App">
+      <Extensions>
+        <uap5:Extension
+          Category="windows.appExecutionAlias"
+          Executable="Jenx.Bluetooth.GattServer.Desktop.exe"
+          EntryPoint="Jenx.Bluetooth.GattServer.Desktop.App">
+          <uap5:AppExecutionAlias>
+            <uap5:ExecutionAlias Alias="Jenx.Bluetooth.GattServer.Desktop.exe" />
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+
+      <uap:VisualElements
+        DisplayName="Jenx.Bluetooth.GattServer.Desktop"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Jenx.Bluetooth.GattServer.Desktop"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="bluetooth"/>
+  </Capabilities>
+</Package>

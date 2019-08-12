@@ -1,0 +1,21 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Talking to device via BLE"
+             Visual="Material"
+             x:Class="Jenx.Bluetooth.Xamarin.Client.BluetoothDataPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" >
+            <Button Text="Get manufacturer data" 
+                    Margin="10"
+                    Clicked="GetManufacturerDataButton_Clicked" />
+            <Label x:Name="output" />            
+            <Button Text="Get manufacturer data" 
+                    Margin="10"
+                    Clicked="WriteDataButton_Clicked" />
+            <Entry x:Name="writedata" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

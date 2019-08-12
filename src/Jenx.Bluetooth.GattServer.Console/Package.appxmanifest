@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap5="http://schemas.microsoft.com/appx/manifest/uap/windows10/5"
+  xmlns:desktop4="http://schemas.microsoft.com/appx/manifest/desktop/windows10/4"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="8579c447-de1d-48c4-baf7-274cda56aeba"
+    Publisher="CN=jenx.si"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="8579c447-de1d-48c4-baf7-274cda56aeba" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Jenx.Bluetooth.GattServer.Console</DisplayName>
+    <PublisherDisplayName>jenx.si</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+                 desktop4:Subsystem="console"
+                 desktop4:SupportsMultipleInstances="true"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="Jenx.Bluetooth.GattServer.Console.Program">
+      <Extensions>
+        <uap5:Extension
+          Category="windows.appExecutionAlias"
+          Executable="Jenx.Bluetooth.GattServer.Console.exe"
+          EntryPoint="Jenx.Bluetooth.GattServer.Console.Program">
+          <uap5:AppExecutionAlias desktop4:Subsystem="console">
+            <uap5:ExecutionAlias Alias="Jenx.Bluetooth.GattServer.Console.exe" />
+          </uap5:AppExecutionAlias>
+        </uap5:Extension>
+      </Extensions>
+
+      <uap:VisualElements
+        DisplayName="Jenx.Bluetooth.GattServer.Console"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Jenx.Bluetooth.GattServer.Console"
+        BackgroundColor="transparent">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="bluetooth"/>
+  </Capabilities>
+</Package>
