@@ -6,12 +6,12 @@
              Visual="Material"
              Title="Search for BLE devices"
              x:Class="Jenx.Bluetooth.Xamarin.Client.MainPage">
-    <StackLayout Orientation="Vertical" >
+    <StackLayout Orientation="Vertical">
         <Button x:Name="ScanButton"
                 Text="Scan"
                 Clicked="ScanButton_Clicked"
                 Margin="10" />
         <ListView x:Name="listView"
-                  ItemSelected="ListView_ItemSelected" />        
+                  ItemSelected="FoundBluetoothDevicesListView_ItemSelected" />
     </StackLayout>
 </ContentPage>

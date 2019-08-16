@@ -4,7 +4,7 @@ namespace Jenx.Bluetooth.Xamarin.Client
 {
     public class GattCharacteristicIdentifiers
     {
-        public static Guid ServiceId = Guid.Parse("19536E67-3682-4588-9F3A-5340B6712150");        
+        public static Guid ServiceId = Guid.Parse("19536E67-3682-4588-9F3A-5340B6712150");
 
         // read only characteristic
         public static Guid FirmwareVersion = Guid.Parse("BC1926EA-6FFA-4D04-928B-76CCCD068CEA");

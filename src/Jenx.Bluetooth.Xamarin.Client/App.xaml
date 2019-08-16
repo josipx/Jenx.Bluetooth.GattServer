@@ -6,6 +6,5 @@
              mc:Ignorable="d"
              x:Class="Jenx.Bluetooth.Xamarin.Client.App">
     <Application.Resources>
-
     </Application.Resources>
 </Application>

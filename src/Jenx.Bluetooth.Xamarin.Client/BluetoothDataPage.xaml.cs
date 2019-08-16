@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Plugin.BLE.Abstractions.Contracts;
+using System;
 using System.Text;
-using Plugin.BLE.Abstractions.Contracts;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +10,7 @@ namespace Jenx.Bluetooth.Xamarin.Client
     public partial class BluetoothDataPage : ContentPage
     {
         private readonly IDevice _connectedDevice;
+
         public BluetoothDataPage(IDevice connectedDevice)
         {
             InitializeComponent();
@@ -28,16 +29,16 @@ namespace Jenx.Bluetooth.Xamarin.Client
                     {
                         var bytes = await characteristic.ReadAsync();
                         var str = Encoding.UTF8.GetString(bytes);
-                        output.Text = str;
+                        ManufacturerLabel.Text = str;
                     }
                 }
             }
             catch
             {
-            }            
+            }
         }
 
-        private async void WriteDataButton_Clicked(object sender, EventArgs e)
+        private async void SendMessageButton_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -47,14 +48,14 @@ namespace Jenx.Bluetooth.Xamarin.Client
                     var characteristic = await service.GetCharacteristicAsync(GattCharacteristicIdentifiers.DataExchange);
                     if (characteristic != null)
                     {
-                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(writedata.Text) ? "jenx.si was here" : writedata.Text);
+                        byte[] senddata = Encoding.UTF8.GetBytes(string.IsNullOrEmpty(SendMessageLabel.Text) ? "jenx.si was here" : SendMessageLabel.Text);
                         var bytes = await characteristic.WriteAsync(senddata);
                     }
                 }
             }
             catch
             {
-            }               
+            }
         }
     }
 }

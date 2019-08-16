@@ -7,15 +7,15 @@
              Visual="Material"
              x:Class="Jenx.Bluetooth.Xamarin.Client.BluetoothDataPage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" >
-            <Button Text="Get manufacturer data" 
+        <StackLayout Orientation="Vertical">
+            <Button Text="Get manufacturer data from device"
                     Margin="10"
                     Clicked="GetManufacturerDataButton_Clicked" />
-            <Label x:Name="output" />            
-            <Button Text="Get manufacturer data" 
+            <Label x:Name="ManufacturerLabel" />
+            <Button Text="Send message to BLE GATT server"
                     Margin="10"
-                    Clicked="WriteDataButton_Clicked" />
-            <Entry x:Name="writedata" />
+                    Clicked="SendMessageButton_Clicked" />
+            <Entry x:Name="SendMessageLabel" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
